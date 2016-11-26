@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/AddPet"
+            android:icon="@drawable/ic_menu_modifypet"
+            android:title="애완동물 추가/변경" />
+        <item
+            android:id="@+id/Diagnosis"
+            android:icon="@drawable/ic_menu_diagnosis"
+            android:title="애완동물 진단" />
+        <item
+            android:id="@+id/Shopping"
+            android:icon="@drawable/ic_menu_shopping"
+            android:title="애견상품 구매" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/MyPage"
+                android:icon="@drawable/ic_menu_mypage"
+                android:title="회원정보 변경" />
+            <item
+                android:id="@+id/Logout"
+                android:icon="@drawable/ic_menu_logout"
+                android:title="로그아웃" />
+        </menu>
+    </item>
+
+</menu>
