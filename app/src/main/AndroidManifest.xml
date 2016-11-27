@@ -91,6 +91,17 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".SampleCoordinatorActivity"
+            android:label="SampleCoordinatorActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+            <action android:name="android.intent.action.SampleCoordinatorActivity" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

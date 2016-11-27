@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
             //startActivity(new Intent(this, ModifyPetActivity.class));
             startActivity(new Intent(this, SignHomeActivity.class));
         } else if (id == R.id.Diagnosis) {
-            startActivity(new Intent(this, DiagnosisActivity.class));
+            startActivity(new Intent(this, SampleCoordinatorActivity.class));
         } else if (id == R.id.Shopping) {
             startActivity(new Intent(this, ShoppingActivity.class));
         } else if (id == R.id.MyPage) {
