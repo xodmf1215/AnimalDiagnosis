@@ -14,9 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.teuljung.practice2.*;
+import com.example.teuljung.practice2.drawer.MyNavigationDrawer;
+import com.example.teuljung.practice2.testing.WebServiceDist;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+//public class MainActivity extends AppCompatActivity implements MyNavigationDrawer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity
             //startActivity(new Intent(this, ModifyPetActivity.class));
             startActivity(new Intent(this, SignHomeActivity.class));
         } else if (id == R.id.Diagnosis) {
-            startActivity(new Intent(this, SampleCoordinatorActivity.class));
+            startActivity(new Intent(this, DiagnosisActivity.class));
         } else if (id == R.id.Shopping) {
             startActivity(new Intent(this, ShoppingActivity.class));
         } else if (id == R.id.MyPage) {
@@ -94,6 +98,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.Logout) {
             // popup Dialogue, logout and go to mainActivity
             startActivity(new Intent(this, MainActivity.class));
+        } else if (id ==R.id.ToSample) {
+            startActivity((new Intent(this, WebServiceDist.class)));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

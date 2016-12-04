@@ -26,6 +26,9 @@
                 android:id="@+id/Logout"
                 android:icon="@drawable/ic_menu_logout"
                 android:title="로그아웃" />
+            <item
+                android:id="@+id/ToSample"
+                android:title="예제 페이지로 이동" />
         </menu>
     </item>
 

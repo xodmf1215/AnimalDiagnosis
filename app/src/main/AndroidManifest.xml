@@ -92,7 +92,7 @@
         </activity>
 
         <activity
-            android:name=".SampleCoordinatorActivity"
+            android:name=".testing.SampleCoordinatorActivity"
             android:label="SampleCoordinatorActivity"
             android:theme="@style/AppTheme">
             <intent-filter>

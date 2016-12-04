@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.teuljung.practice2.testing.WebServiceDist;
+
 /**
  * Created by teul jung on 2016-11-24.
  */
@@ -94,6 +97,8 @@ public class ModifyPetActivity extends AppCompatActivity
         } else if (id == R.id.Logout) {
             // popup Dialogue, logout and go to mainActivity
             startActivity(new Intent(this, MainActivity.class));
+        }else if (id ==R.id.ToSample) {
+            startActivity((new Intent(this, WebServiceDist.class)));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

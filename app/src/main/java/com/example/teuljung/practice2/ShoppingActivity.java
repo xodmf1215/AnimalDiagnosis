@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.teuljung.practice2.testing.WebServiceDist;
+
 /**
  * Created by teul jung on 2016-11-24.
  */
@@ -107,6 +109,8 @@ public class ShoppingActivity extends AppCompatActivity
         } else if (id == R.id.Logout) {
             // popup Dialogue, logout and go to mainActivity
             startActivity(new Intent(this, MainActivity.class));
+        }else if (id ==R.id.ToSample) {
+            startActivity((new Intent(this, WebServiceDist.class)));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

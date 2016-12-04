@@ -1,8 +1,9 @@
-package com.example.teuljung.practice2;
+package com.example.teuljung.practice2.testing;
 
 /**
- * Created by teul jung on 2016-11-27.
+ * Created by teul jung on 2016-12-05.
  */
+import com.example.teuljung.practice2.R;
 import com.example.teuljung.practice2.coordinatorLayout.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,15 +19,15 @@ import android.support.v4.view.ViewPager;
 public class SampleCoordinatorActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.sample_coordinator_activity);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.sample_coordinator_activity);
 
-    ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-    setupViewPager(viewPager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        setupViewPager(viewPager);
 
-    TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-    tabLayout.setupWithViewPager(viewPager);
-}
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
+    }
 
     private void setupViewPager(ViewPager viewPager) {
         final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
