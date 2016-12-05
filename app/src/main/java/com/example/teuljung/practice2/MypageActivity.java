@@ -99,6 +99,8 @@ public class MypageActivity extends AppCompatActivity
             startActivity(new Intent(this, MainActivity.class));
         }else if (id ==R.id.ToSample) {
             startActivity((new Intent(this, WebServiceDist.class)));
+        } else if(id==R.id.ToLoginHome) {
+            startActivity((new Intent(this, SignHomeActivity.class)));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

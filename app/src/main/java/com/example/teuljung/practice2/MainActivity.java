@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.AddPet) {
             // Handle the camera action
             //startActivity(new Intent(this, ModifyPetActivity.class));
-            startActivity(new Intent(this, SignHomeActivity.class));
+            startActivity(new Intent(this, ModifyPetActivity.class));
         } else if (id == R.id.Diagnosis) {
             startActivity(new Intent(this, DiagnosisActivity.class));
         } else if (id == R.id.Shopping) {
@@ -100,6 +100,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, MainActivity.class));
         } else if (id ==R.id.ToSample) {
             startActivity((new Intent(this, WebServiceDist.class)));
+        } else if(id==R.id.ToLoginHome) {
+            startActivity((new Intent(this, SignHomeActivity.class)));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

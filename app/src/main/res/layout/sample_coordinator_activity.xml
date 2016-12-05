@@ -19,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:gravity="start|center_vertical"
             android:textSize="20dp"
-            android:text="@string/app_name"/>
+            android:text="헤더레이아웃의text"/>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"

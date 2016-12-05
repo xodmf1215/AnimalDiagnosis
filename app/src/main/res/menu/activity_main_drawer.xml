@@ -29,6 +29,9 @@
             <item
                 android:id="@+id/ToSample"
                 android:title="예제 페이지로 이동" />
+            <item
+                android:id="@+id/ToLoginHome"
+                android:title="로그인홈으로 이동" />
         </menu>
     </item>
 

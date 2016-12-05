@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.teuljung.practice2.testing.WebServiceDist;
+import com.example.teuljung.practice2.testing.*;
 
 /**
  * Created by teul jung on 2016-11-24.
