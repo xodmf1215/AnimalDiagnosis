@@ -10,10 +10,10 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
-*/
+
 public class Web_Service_Test {
     //Namespace of the Webservice - can be found in WSDL
-    /*
+
     private static String NAMESPACE = "http://example.prgguru.com/";
     //Webservice URL - WSDL File location
     private static String URL = "http://192.168.1.100:8080/HelloWorldWebService/SayHelloService?WSDL";
@@ -59,5 +59,10 @@ public class Web_Service_Test {
         //Return resTxt to calling object
         return resTxt;
     }
-    */
-}
+
+}*/
+
+
+
+
+
