@@ -1,7 +1,7 @@
 package com.example.teuljung.practice2.coordinatorLayout;
 
 /**
- * Created by teul jung on 2016-11-26.
+ * Created by teul jung on 2016-12-12.
  */
 import com.example.teuljung.practice2.*;
 import android.os.Bundle;
@@ -17,14 +17,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GridViewPageFragment extends Fragment {
+public class GridViewPageFragment_dog extends Fragment {
     private static final int ITEM_COUNT = 20;
 
     private RecyclerView mGridView;
     private List<String> mItemList;
 
-    public static GridViewPageFragment createInstance() {
-        final GridViewPageFragment pageFragment = new GridViewPageFragment();
+    public static GridViewPageFragment_dog createInstance() {
+        final GridViewPageFragment_dog pageFragment = new GridViewPageFragment_dog();
         final Bundle bundle = new Bundle();// 번들이 뭔가?
         pageFragment.setArguments(bundle);
 
@@ -53,9 +53,6 @@ public class GridViewPageFragment extends Fragment {
     }
 
     public class GridRecyclerViewAdapter extends RecyclerView.Adapter<GridRecyclerItemViewHolder> {
-        private static final int VIEW_TYPE_1 = 0;
-        private static final int VIEW_TYPE_2 = 1;
-        private static final int VIEW_TYPE_3 = 2;
 
         public GridRecyclerViewAdapter() {
         }
@@ -64,18 +61,7 @@ public class GridViewPageFragment extends Fragment {
         public GridRecyclerItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) { //task 2
             final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
-            final int layoutRes;
-            switch (viewType) {
-                case VIEW_TYPE_2:
-                    layoutRes = R.layout.grid_item_2;
-                    break;
-                case VIEW_TYPE_3:
-                    layoutRes = R.layout.grid_item_3;
-                    break;
-                default:
-                    layoutRes = R.layout.grid_item_1;
-                    break;
-            }
+            final int layoutRes=R.layout.grid_item_3;
 
             final View view = inflater.inflate(layoutRes, parent, false);
 
@@ -97,7 +83,7 @@ public class GridViewPageFragment extends Fragment {
 
         @Override
         public int getItemViewType(int position) {
-            return position % 3;
+            return 1;
         }
     }
 

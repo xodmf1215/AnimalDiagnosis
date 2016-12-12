@@ -4,6 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +22,12 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.teuljung.practice2.coordinatorLayout.GridViewPageFragment;
+import com.example.teuljung.practice2.coordinatorLayout.GridViewPageFragment_dog;
 import com.example.teuljung.practice2.testing.WebServiceDist;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by teul jung on 2016-11-24.
@@ -31,14 +42,11 @@ public class ShoppingActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);//content layout
+        setupViewPager(viewPager);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,15 +56,41 @@ public class ShoppingActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+    private void setupViewPager(ViewPager viewPager) {
+        final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        pagerAdapter.addFragment(GridViewPageFragment_dog.createInstance(), "Dogs' item");
+        pagerAdapter.addFragment(GridViewPageFragment.createInstance(), "Others");
+        viewPager.setAdapter(pagerAdapter);
+    }
 
-        //Get List from Database
-        //Show ListView
-        mListView=(ListView) findViewById(R.id.reminders_list_view);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this,R.layout.shopping_view_layout,R.id.row_text,new String[]{"click this","second record","third record"}
-        );  // context, layout(view), row(view), data(model)-array components are test data
-        mListView.setAdapter(arrayAdapter);
+    static class PagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> fragmentList = new ArrayList<>();
+        private final List<String> fragmentTitleList = new ArrayList<>();
 
+        public PagerAdapter(FragmentManager fragmentManager) {
+            super(fragmentManager);
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            fragmentList.add(fragment);
+            fragmentTitleList.add(title);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentList.size();
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return fragmentTitleList.get(position);
+        }
     }
 
     @Override

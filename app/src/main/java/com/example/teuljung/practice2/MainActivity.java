@@ -1,6 +1,8 @@
 package com.example.teuljung.practice2;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +18,7 @@ import android.view.MenuItem;
 
 import com.example.teuljung.practice2.*;
 import com.example.teuljung.practice2.drawer.MyNavigationDrawer;
+import com.example.teuljung.practice2.testing.SampleCoordinatorActivity;
 import com.example.teuljung.practice2.testing.WebServiceDist;
 
 public class MainActivity extends AppCompatActivity
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00bcd4")));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity
             // popup Dialogue, logout and go to mainActivity
             startActivity(new Intent(this, MainActivity.class));
         } else if (id ==R.id.ToSample) {
-            startActivity((new Intent(this, WebServiceDist.class)));
+            startActivity((new Intent(this, SampleCoordinatorActivity.class)));
         } else if(id==R.id.ToLoginHome) {
             startActivity((new Intent(this, SignHomeActivity.class)));
         }
