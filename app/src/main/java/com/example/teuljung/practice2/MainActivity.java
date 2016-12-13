@@ -18,6 +18,8 @@ import android.view.MenuItem;
 
 import com.example.teuljung.practice2.*;
 import com.example.teuljung.practice2.drawer.MyNavigationDrawer;
+import com.example.teuljung.practice2.testing.ImageAreasTestActivity;
+import com.example.teuljung.practice2.testing.ImageMapTestActivity;
 import com.example.teuljung.practice2.testing.SampleCoordinatorActivity;
 import com.example.teuljung.practice2.testing.WebServiceDist;
 
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity
             // popup Dialogue, logout and go to mainActivity
             startActivity(new Intent(this, MainActivity.class));
         } else if (id ==R.id.ToSample) {
-            startActivity((new Intent(this, SampleCoordinatorActivity.class)));
+            startActivity((new Intent(this, ImageAreasTestActivity.class)));
         } else if(id==R.id.ToLoginHome) {
             startActivity((new Intent(this, SignHomeActivity.class)));
         }

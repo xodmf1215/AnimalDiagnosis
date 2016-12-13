@@ -20,4 +20,10 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <declare-styleable name="ImageMap">
+        <attr name="map" format="string"/>
+        <attr name="fitImageToScreen" format="boolean"/>
+        <attr name="scaleFromOriginal" format="boolean"/>
+        <attr name="maxSizeFactor" format="float"/>
+    </declare-styleable>
 </resources>

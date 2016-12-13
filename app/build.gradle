@@ -17,7 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawble/login'] } }
+    sourceSets { main { res.srcDirs = ['src/main/res',
+                                       'src/main/res/layouts',
+                                       'src/main/res/layouts/item_layout',
+                                       'src/main/res/layouts/fragment_layout',
+                                       'src/main/res/layouts/page_layout',
+                                       'src/main/res/layouts/test_layout',
+                                       'src/main/res/layouts/detail_view_layout'] } }
 }
 
 dependencies {
