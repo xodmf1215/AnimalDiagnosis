@@ -24,6 +24,7 @@ android {
                                        'src/main/res/layouts/page_layout',
                                        'src/main/res/layouts/test_layout',
                                        'src/main/res/layouts/detail_view_layout'] } }
+    useLibrary'org.apache.http.legacy'
 }
 
 dependencies {

@@ -45,11 +45,11 @@
                 <TextView
                     android:id="@+id/text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:gravity="start|center_vertical"
                     android:textSize="20dp"
-                    android:text="애완 동물 추가하거나 정보 변경할 애완 동물을 고르세요"/>
+                    android:text="진단하고 싶은 동물과 부위를 선택하고 증상을 체크하세요"/>
                 <android.support.design.widget.TabLayout
                     android:id="@+id/tab_layout"
                     android:layout_width="match_parent"

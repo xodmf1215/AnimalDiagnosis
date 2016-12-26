@@ -23,7 +23,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.example.teuljung.practice2.coordinatorLayout.GridViewPageFragment;
+import com.example.teuljung.practice2.coordinatorLayout.diagViewPageFragment;
 import com.example.teuljung.practice2.coordinatorLayout.GridViewPageFragment_dog;
 import com.example.teuljung.practice2.testing.*;
 
@@ -86,14 +86,14 @@ public class DiagnosisActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-    private void setupViewPager(ViewPager viewPager) {
+    private void setupViewPager(ViewPager viewPager) { // viewpager helps horizontal page scrolling
         final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
-        //pagerAdapter.addFragment(PageFragment_diag_dog.createInstance(), "dogs");
+        pagerAdapter.addFragment(diagViewPageFragment.createInstance(), "dogs");
         pagerAdapter.addFragment(GridViewPageFragment_dog.createInstance(), "cats");
         viewPager.setAdapter(pagerAdapter);
     }
 
-    static class PagerAdapter extends FragmentPagerAdapter {
+    static class PagerAdapter extends FragmentPagerAdapter { //add fragmentized pages
         private final List<Fragment> fragmentList = new ArrayList<>();
         private final List<String> fragmentTitleList = new ArrayList<>();
 

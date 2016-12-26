@@ -21,45 +21,45 @@
 
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edittext_top_bg"
             android:padding="10dp"
-            android:hint="Email"
+            android:hint="example@mail.com"
             android:textColorHint="#bbbbbb"
             android:drawableLeft="@drawable/login_email"/>
         <EditText
-            android:id="@+id/etUserName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/login_edittext_default_bg"
-            android:layout_marginTop="-2dp"
-            android:padding="10dp"
-            android:hint="User Name"
-            android:textColorHint="#bbbbbb"
-            android:drawableLeft="@drawable/login_user"/>
-        <EditText
-            android:id="@+id/etPass"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edittext_bottom_bg"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
-            android:hint="Password"
+            android:hint="******"
             android:textColorHint="#bbbbbb"
-            android:password="true"
+            android:inputType="textPassword"
             android:drawableLeft="@drawable/login_password"/>
         <Button
-            android:id="@+id/btnSingIn"
+            android:id="@+id/registerbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_margin="4dp"
-            android:text="Sign Up"
+            android:text="Register"
             style="@style/DefaultButtonText"
             android:background="@drawable/login_button_default_bg"
             />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/login"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_blue_back"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:text="Signin Now"/>
     </LinearLayout>
 
 </RelativeLayout>
