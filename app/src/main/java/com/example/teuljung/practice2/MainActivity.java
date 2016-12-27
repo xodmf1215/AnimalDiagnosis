@@ -34,15 +34,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00bcd4")));
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -95,19 +86,26 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
             //startActivity(new Intent(this, ModifyPetActivity.class));
             startActivity(new Intent(this, ModifyPetActivity.class));
+            finish();
         } else if (id == R.id.Diagnosis) {
             startActivity(new Intent(this, DiagnosisActivity.class));
+            finish();
         } else if (id == R.id.Shopping) {
             startActivity(new Intent(this, ShoppingActivity.class));
+            finish();
         } else if (id == R.id.MyPage) {
             startActivity(new Intent(this, MypageActivity.class));
+            finish();
         } else if (id == R.id.Logout) {
             // popup Dialogue, logout and go to mainActivity
             startActivity(new Intent(this, MainActivity.class));
+            finish();
         } else if (id ==R.id.ToSample) {
             startActivity((new Intent(this, ImageAreasTestActivity.class)));
+            finish();
         } else if(id==R.id.ToLoginHome) {
             startActivity((new Intent(this, SignHomeActivity.class)));
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

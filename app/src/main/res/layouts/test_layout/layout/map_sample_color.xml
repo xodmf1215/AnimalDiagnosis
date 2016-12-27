@@ -12,6 +12,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/p2_ship_mask"
         android:visibility="invisible"
+        android:tag="Thisisit"
         />
     <ImageView
         android:id="@+id/image"
